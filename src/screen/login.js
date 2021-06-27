@@ -6,7 +6,6 @@ import {useHistory} from 'react-router-dom'
 import M from 'materialize-css'
 
 const Login = (props) => {
-    console.log("Props",props);
     const history=useHistory()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -38,9 +37,7 @@ const Login = (props) => {
             }
         })
     }
-
     return (
-
         <div>
             <div>
                 <h2>Login</h2>
@@ -51,19 +48,13 @@ const Login = (props) => {
                 <button onClick={validateEmailPass}>Submit</button>
             </div>
         </div>
-
     )
 }
-
 const mapStateToDispatch = (dispatch) => {
     return {
         loginAction: (payload) => { 
               dispatch(loggedInAction(payload)) 
-    }
-
+        }
 }
 }
-
-
-
 export default connect(null, mapStateToDispatch)(Login)

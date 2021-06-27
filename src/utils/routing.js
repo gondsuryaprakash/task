@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
-
 import DashBoard from '../screen/dashboard'
 import LoginPage from '../screen/login'
 import {useEffect} from 'react'
